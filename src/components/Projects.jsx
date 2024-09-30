@@ -20,36 +20,58 @@ const ProjectCard = ({
   return (
     <motion.div
       variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
+      animate={{
+        flex: active === id ? 3.5 : 0.3, // Adjust flex to control the size of the cards
+        opacity: active === id ? 1 : 0.6, // Dimming effect for inactive cards
+      }}
+      initial={{
+        opacity: 0.7,
+      }}
+      transition={{ duration: 0.75, type: 'spring' }}
       className={`relative ${
-        active === id ? 'lg:flex-[3.5] flex-[10]' : 'lg:flex-[0.5] flex-[2]'
+        active === id ? 'lg:flex-[3.5] flex-[10]' : 'lg:flex-[0.3] flex-[2]'
       } flex items-center justify-center min-w-[170px] 
-      h-[420px] cursor-pointer card-shadow`}
-      onClick={() => handleClick(id)}>
+      h-[420px] cursor-pointer card-shadow overflow-hidden`} // Added overflow-hidden to prevent overlap
+      onClick={() => handleClick(id)}
+      style={{ zIndex: active === id ? 10 : 1 }} // Ensure active card is on top
+    >
       <div
-        className="absolute top-0 left-0 z-10 bg-jetLight 
-      h-full w-full opacity-[0.5] rounded-[24px]"></div>
+        className={`absolute top-0 left-0 z-10 bg-jetLight 
+      h-full w-full rounded-[24px] transition duration-300 
+      ${active === id ? 'opacity-[0.7]' : 'opacity-[0.5]'}`}></div>
 
-      <img
+      <motion.img
         src={image}
         alt={name}
-        className="absolute w-full h-full object-cover rounded-[24px]"
+        className={`absolute w-full h-full object-cover rounded-[24px] ${
+          active === id ? 'scale-[1.2]' : 'scale-[1]'
+        } transition-transform duration-300 ease-in-out`}
       />
 
       {active !== id ? (
         <div className="flex items-center justify-start pr-[4.5rem]">
-          <h3
+          <motion.h3
             className="font-extrabold font-beckman uppercase w-[200px] h-[30px] 
-        whitespace-nowrap sm:text-[27px] text-[18px] text-timberWolf tracking-[1px]
-        absolute z-0 lg:bottom-[7rem] lg:rotate-[-90deg] lg:origin-[0,0]
-        leading-none z-20">
+            whitespace-nowrap sm:text-[27px] text-[18px] text-timberWolf tracking-[1px]
+            absolute z-0 lg:bottom-[7rem] lg:rotate-[-90deg] lg:origin-[0,0]
+            leading-none z-20"
+            animate={{
+              rotate: active === id ? 0 : -90,
+            }}
+            transition={{
+              duration: 0.5,
+            }}>
             {name}
-          </h3>
+          </motion.h3>
         </div>
       ) : (
         <>
-          <div
+          <motion.div
             className="absolute bottom-0 p-8 justify-start w-full 
-            flex-col bg-[rgba(122,122,122,0.5)] rounded-b-[24px] z-20">
+            flex-col bg-[rgba(122,122,122,0.5)] rounded-b-[24px] z-20"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}>
             <div className="absolute inset-0 flex justify-end m-3">
               <div
                 onClick={() => window.open(repo, '_blank')}
@@ -103,7 +125,7 @@ const ProjectCard = ({
               />
               LIVE DEMO
             </button>
-          </div>
+          </motion.div>
         </>
       )}
     </motion.div>
@@ -138,7 +160,7 @@ const Projects = () => {
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
         className={`${styles.innerWidth} mx-auto flex flex-col`}>
-        <div className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5">
+        <div className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5 overflow-hidden">
           {projects.map((project, index) => (
             <ProjectCard
               key={project.id}

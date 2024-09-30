@@ -37,12 +37,7 @@ const About = () => {
       <motion.p
         variants={fadeIn('', '', 0.1, 1)}
         className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis
-        sapiente ipsum dolorum dicta eaque cumque inventore molestias, beatae ea
-        quaerat alias accusamus voluptas autem! Alias odit voluptates in totam
-        vitae dignissimos minus eaque culpa unde tempore dolore aperiam
-        obcaecati voluptatum aliquam corrupti, suscipit accusamus! Odit unde
-        veniam dolorum ipsum doloribus.
+        Hello! My name is Richman Tan, and I’m a second-year software engineering student at the University of Auckland. I'm currently the Social Events Lead for the Software Engineering Student Association, where I coordinate events that bring our community together. I have a passion for creating impactful software solutions and recently built a music artist recommender system using Python and React. I’m eager to explore more opportunities that blend technology with innovation and problem-solving.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-48">

@@ -28,6 +28,11 @@ import {
   kelhel,
   microverse,
 } from '../assets';
+import questionmark from '../assets/icons/Question_mark_white.png';
+import python from '../assets/tech/python.png';
+import java from '../assets/tech/java.png';
+import easebg from '../assets/projects/ease-elves-talk-light.png';
+import javafxbg from '../assets/projects/javafx-mystery-game.png';
 
 export const navLinks = [
   {
@@ -81,20 +86,12 @@ const technologies = [
     icon: reactjs,
   },
   {
-    name: 'Redux Toolkit',
-    icon: redux,
-  },
-  {
     name: 'Tailwind CSS',
     icon: tailwind,
   },
   {
     name: 'Node JS',
     icon: nodejs,
-  },
-  {
-    name: 'Rails',
-    icon: rubyrails,
   },
   {
     name: 'graphql',
@@ -116,152 +113,113 @@ const technologies = [
     name: 'docker',
     icon: docker,
   },
+  {
+    name: 'Python',
+    icon: python,
+  },
+  {
+    name: 'Java',
+    icon: java,
+  },
 ];
 
 const experiences = [
   {
-    title: 'Front-End Developer',
-    company_name: 'Cover Hunt',
-    icon: coverhunt,
+    title: 'Aspiring Software Engineer',
+    company_name: 'Looking for first Opportunities',
+    icon: questionmark, // Feel free to replace this with any placeholder icon or image
     iconBg: '#333333',
-    date: 'Aug 2021 - Feb 2022',
-  },
-  {
-    title: 'Mentor (Volunteer)',
-    company_name: 'Microverse',
-    icon: microverse,
-    iconBg: '#333333',
-    date: 'Mar 2022 - May 2022',
-  },
-  {
-    title: 'Junior Software Engineer',
-    company_name: 'Kelhel',
-    icon: kelhel,
-    iconBg: '#333333',
-    date: 'May 2022 - Oct 2022',
-  },
-  {
-    title: 'Full Stack Developer',
-    company_name: 'Diversity Cyber Council',
-    icon: dcc,
-    iconBg: '#333333',
-    date: 'Sep 2022 - Present',
+    date: 'Open to Start Anytime!',
   },
 ];
+
 
 const projects = [
   {
     id: 'project-1',
-    name: 'KomiKult',
-    description: 'A comic characters list app that displays Marvel characters.',
+    name: 'Ease Elves',
+    description: 'An online web application developed during the "Hack for Humanity" hackathon to support mental health. It provides a virtual friend for users to confide in.',
     tags: [
       {
         name: 'react',
         color: 'blue-text-gradient',
       },
       {
-        name: 'mongodb',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'tailwind',
+        name: 'css',
         color: 'pink-text-gradient',
       },
+      {
+        name: 'javascript',
+        color: 'yellow-text-gradient',
+      },
     ],
-    image: komikult,
-    repo: 'https://github.com/shaqdeff/KomiKult',
-    demo: 'https://shaqdeff.github.io/KomiKult/',
+    image: easebg, // Replace with a variable containing your image
+    repo: 'https://github.com/your-username/ease-elves', // Update with your repository link
+    demo: 'https://easeelves.netlify.app/', // Update with the actual demo link if available
   },
   {
     id: 'project-2',
-    name: 'Leaderboard',
-    description:
-      'A leaderboard list app that displays scores submitted by different players.',
+    name: 'Music Recommender',
+    description: 'A full-stack application that recommends music artists to users based on collaborative filtering techniques using a Flask backend and React frontend.',
     tags: [
       {
-        name: 'react',
+        name: 'python',
         color: 'blue-text-gradient',
       },
       {
-        name: 'restapi',
+        name: 'flask',
         color: 'green-text-gradient',
       },
       {
-        name: 'scss',
+        name: 'react',
         color: 'pink-text-gradient',
       },
     ],
-    image: leaderboard,
-    repo: 'https://github.com/shaqdeff/Leaderboard',
-    demo: 'https://shaqdeff.github.io/Leaderboard/',
+    image: leaderboard, // Replace with a variable containing your image
+    repo: 'https://github.com/your-username/music-recommender', // Update with your repository link
+    demo: 'https://musicrecommender.netlify.app/', // Update with the actual demo link if available
   },
   {
     id: 'project-3',
-    name: 'Math Magicians',
-    description: 'This is a single-page calculator app built with React',
+    name: 'Image Fingerprinting',
+    description: 'A MATLAB project implementing image processing techniques to generate unique image fingerprints for comparison and identification.',
     tags: [
       {
-        name: 'nextjs',
+        name: 'matlab',
         color: 'blue-text-gradient',
       },
       {
-        name: 'supabase',
+        name: 'image processing',
         color: 'green-text-gradient',
       },
-      {
-        name: 'css',
-        color: 'pink-text-gradient',
-      },
     ],
-    image: math,
-    repo: 'https://github.com/shaqdeff/Math-Magicians',
-    demo: 'https://inspiring-medovik-37d3b3.netlify.app/',
+    image: leaderboard, // Replace with a variable containing your image
+    repo: 'https://github.com/your-username/image-fingerprinting', // Update with your repository link if available
+    demo: 'https://your-demo-link.com/', // Update with the actual demo link if available
   },
   {
     id: 'project-4',
-    name: 'Movie Metro',
-    description: `A single-page application that allows users to search for any movie or show's ratings and its details.`,
+    name: 'JavaFX Mystery Game',
+    description: 'A JavaFX-based game that simulates a mystery-solving scenario where players investigate suspects and clues to find the true culprit.',
     tags: [
       {
-        name: 'nextjs',
+        name: 'java',
         color: 'blue-text-gradient',
       },
       {
-        name: 'supabase',
+        name: 'javafx',
         color: 'green-text-gradient',
       },
       {
-        name: 'css',
+        name: 'oop',
         color: 'pink-text-gradient',
       },
     ],
-    image: movie,
-    repo: 'https://github.com/shaqdeff/Movie-Metro',
-    demo: 'https://movie-metro.netlify.app/',
-  },
-  {
-    id: 'project-5',
-    name: 'Nyeusi Fest Site',
-    description:
-      'This is a demo concert website for a music festival called Nyeusi.',
-    tags: [
-      {
-        name: 'nextjs',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'supabase',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'css',
-        color: 'pink-text-gradient',
-      },
-    ],
-    image: nyeusi,
-    repo: 'https://github.com/shaqdeff/Nyeusi-Fest-Site',
-    demo: 'https://shaqdeff.github.io/Nyeusi-Fest-Site/',
+    image: javafxbg, // Replace with a variable containing your image
+    repo: 'https://github.com/your-username/mystery-game', // Update with your repository link if available
+    demo: 'https://your-demo-link.com/', // Update with the actual demo link if available
   },
 ];
+
 
 export { services, technologies, experiences, projects };

@@ -4,7 +4,7 @@ import { styles } from '../styles';
 import { navLinks } from '../constants';
 import { bwmap, worldmap } from '../assets';
 import richmanimg from '../assets/personal/richmanimg.jpg';
-import richmanimgnobg from '../assets/personal/richmanimg-removebg.png';
+import richmanimgnobg from '../assets/personal/bandw.png';
 
 const Hero = () => {
   return (
@@ -48,8 +48,8 @@ const Hero = () => {
               </span>
             </h1>
             <p className={`${styles.heroSubText} mt-2 text-eerieBlack`}>
-              Lorem ipsum dolor sit amet. <br className="sm:block hidden" />
-              consectetur adipisicing elit deleniti, voluptas.
+              2nd Year<br className="sm:block hidden" />
+              Software Engineer
             </p>
           </div>
           <div
@@ -91,7 +91,7 @@ const Hero = () => {
       md:ml-[65vw]              /* Moves further right for medium screens */
       lg:ml-[70vw]              /* Moves even further right for large screens */
       xl:ml-[75vw]              /* Moves further right for extra-large screens */
-      2xl:ml-[78vw]             /* Moves further right for 2x large screens */
+      2xl:ml-[70vw]             /* Moves further right for 2x large screens */
       sm:h-[90vh]               /* Image height for small screens */
       md:h-[70vh]               /* Image height for medium screens */
       lg:h-[75vh]               /* Image height for large screens */
